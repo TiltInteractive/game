@@ -7,10 +7,11 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed;
-
-    private Vector2 direction;
+    
+    public static Vector2 direction;
     private Rigidbody2D rb;
-
+    
+    public Animator animator;
 
     // private BoxCollider2D boxCollider;
     // private Vector3 moveDelta;
@@ -27,6 +28,14 @@ public class Player : MonoBehaviour
     private void Update() {
         direction.x = Input.GetAxisRaw("Horizontal");
         direction.y = Input.GetAxisRaw("Vertical");
+
+        if (Mathf.Abs(direction.x) != 0 || Mathf.Abs(direction.y) != 0)
+        {
+            animator.SetFloat("move", 1);
+        } else
+        {
+            animator.SetFloat("move", 0);
+        }
     }
     private void FixedUpdate()
     {

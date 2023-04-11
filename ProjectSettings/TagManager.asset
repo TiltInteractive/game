@@ -14,7 +14,7 @@ TagManager:
   - Block
   - Creature
   - mesh
-  - 
+  - bullet
   - 
   - 
   - 
@@ -43,4 +43,10 @@ TagManager:
     locked: 0
   - name: Creature
     uniqueID: 4253628069
+    locked: 0
+  - name: mesh
+    uniqueID: 2349705909
+    locked: 0
+  - name: bullet
+    uniqueID: 3955033355
     locked: 0
