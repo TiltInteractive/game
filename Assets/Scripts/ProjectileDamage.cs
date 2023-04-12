@@ -25,7 +25,8 @@ public class ProjectileDamage : MonoBehaviour
             {
                 Health health = coll.gameObject.GetComponent<Health>();
                 health.takeDamage(damage);
-                Destroy(gameObject);
+                
             }
+            Destroy(gameObject);
         }
 }

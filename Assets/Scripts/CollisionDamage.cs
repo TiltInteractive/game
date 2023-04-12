@@ -8,8 +8,6 @@ public class CollisionDamage : MonoBehaviour
     public int collisionDamage = 10;
     public string collisionTag;
 
-    public float health;
-    public PlayerHealth playerhealth;
 
     void Start()
     {
@@ -25,11 +23,8 @@ public class CollisionDamage : MonoBehaviour
         {
             if (coll.gameObject.tag == collisionTag)
             {
-
-                if (collisionTag == "Player"){
-                    
-                }
-                playerhealth health = coll.gameObject.GetComponent<PlayerHealth>();
+                Debug.Log("coll");
+                PlayerHealth health = coll.gameObject.GetComponent<PlayerHealth>();
                 health.takeDamage(collisionDamage);
             }
         }

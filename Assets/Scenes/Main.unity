@@ -240,6 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6182d3b68f5035c478935899d78a2e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 100
 --- !u!61 &137453262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -362,9 +364,8 @@ GameObject:
   - component: {fileID: 147326679}
   - component: {fileID: 147326673}
   - component: {fileID: 147326680}
-  - component: {fileID: 147326678}
-  - component: {fileID: 147326683}
-  - component: {fileID: 147326684}
+  - component: {fileID: 147326681}
+  - component: {fileID: 147326682}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -501,20 +502,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.19, y: 0.26}
   m_EdgeRadius: 0
---- !u!114 &147326678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147326671}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49982f495ac4fd54bb8313fcce4b661b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isStatic: 0
-  offset: -0.64
 --- !u!95 &147326679
 Animator:
   serializedVersion: 5
@@ -552,23 +539,7 @@ MonoBehaviour:
   Bullet: {fileID: 179591195449554614, guid: 88feea4e4f1d16544812a0b8fe2a31be, type: 3}
   BulletSpeed: 200
   Shootpoint: {fileID: 1359362288}
---- !u!114 &147326683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147326671}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3329bff2a1f0af42ba8588363258e59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 1429799615}
-  health: 0
-  maxHealth: 0
-  playerhealth: {fileID: 0}
---- !u!114 &147326684
+--- !u!114 &147326681
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -582,6 +553,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+--- !u!114 &147326682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147326671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3329bff2a1f0af42ba8588363258e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 1429799615}
+  health: 0
+  maxHealth: 0
+  playerhealth: {fileID: 147326681}
 --- !u!1 &258082708
 GameObject:
   m_ObjectHideFlags: 0
