@@ -14,7 +14,7 @@ public class ShootScript : MonoBehaviour
     public GameObject Bullet;
 
     public float BulletSpeed;
-    private int flag = 1;
+
     public Transform Shootpoint;
     void Start()
     {
