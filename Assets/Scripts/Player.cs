@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
       //  boxCollider = GetComponent<BoxCollider2D>();
     }
 
@@ -39,7 +40,6 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Debug.Log(direction);
         rb.MovePosition(rb.position + direction * speed  * Time.fixedDeltaTime);
 
 
