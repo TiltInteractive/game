@@ -7,7 +7,7 @@ public class RoomGeneration : MonoBehaviour
 {
     public GameObject Bullet;
     public int part = 1;
-    public int level = 1;
+    static public int level = 1;
     public Sprite edge;
     public Sprite floor;
     public Sprite floor_edge_left_up;
@@ -18,6 +18,7 @@ public class RoomGeneration : MonoBehaviour
     public Sprite floor_edge_right;
     public Sprite floor_edge_right_up;
     public Sprite floor_edge_up;
+    public Sprite level_end;
     public float sizeF = 0.32f;
 
     // Start is called before the first frame update
@@ -32,19 +33,15 @@ public class RoomGeneration : MonoBehaviour
         switch (s)
         {
             case "*":
-
-                Debug.Log(pos);
                 create(edge, pos, s);
                 break;
             case "+":
-                Debug.Log(pos);
+                create(level_end, pos, s);
                 break;
             case "-":
-                Debug.Log(pos);
 
                 break;
             case " ":
-                Debug.Log(pos);
                 create(floor, pos, s);
                 break;
             case "|‾":
@@ -91,11 +88,19 @@ public class RoomGeneration : MonoBehaviour
         
         
         GameObject newBlock = new GameObject("roomComponent");
+        newBlock.gameObject.tag = "roomComponent";
         newBlock.transform.position = position;
         newBlock.transform.localScale = size;
         if(s == "*") {
             newBlock.AddComponent<BoxCollider2D>();
             newBlock.GetComponent<BoxCollider2D>().size = new Vector2(sizeF, sizeF);
+        }
+        else if(s == "+") {
+            newBlock.AddComponent<BoxCollider2D>();
+            newBlock.GetComponent<BoxCollider2D>().size = new Vector2(sizeF, sizeF);
+            newBlock.GetComponent<BoxCollider2D>().isTrigger = true;
+            newBlock.AddComponent<LevelEnd>();
+            
         }
         SpriteRenderer renderer = newBlock.AddComponent<SpriteRenderer>();
         renderer.sprite = sprite;
