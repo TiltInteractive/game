@@ -847,8 +847,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 179591195449554614, guid: 88feea4e4f1d16544812a0b8fe2a31be, type: 3}
-  part: 2
-  level: 3
+  part: 1
+  level: 1
   edge: {fileID: 1902182639, guid: 5a583f08cec1d284385df39bfaac660d, type: 3}
   floor: {fileID: -1435790171, guid: 5a583f08cec1d284385df39bfaac660d, type: 3}
   floor_edge_left_up: {fileID: 135289705, guid: 5a583f08cec1d284385df39bfaac660d, type: 3}
