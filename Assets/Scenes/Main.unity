@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 147326680}
   - component: {fileID: 147326681}
   - component: {fileID: 147326682}
+  - component: {fileID: 147326683}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -483,7 +484,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147326671}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -570,6 +571,22 @@ MonoBehaviour:
   health: 0
   maxHealth: 0
   playerhealth: {fileID: 147326681}
+--- !u!70 &147326683
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147326671}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.010054126, y: 0}
+  m_Size: {x: 0.14946523, y: 0.26}
+  m_Direction: 0
 --- !u!1 &258082708
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,7 +851,15 @@ MonoBehaviour:
   level: 3
   edge: {fileID: 1902182639, guid: 5a583f08cec1d284385df39bfaac660d, type: 3}
   floor: {fileID: -1435790171, guid: 5a583f08cec1d284385df39bfaac660d, type: 3}
-  size: 1
+  floor_edge_left_up: {fileID: 135289705, guid: 5a583f08cec1d284385df39bfaac660d, type: 3}
+  floor_edge_left: {fileID: -2141177348, guid: 5a583f08cec1d284385df39bfaac660d, type: 3}
+  floor_edge_left_down: {fileID: -618193020, guid: 5a583f08cec1d284385df39bfaac660d, type: 3}
+  floor_edge_down: {fileID: 0}
+  floor_edge_right_down: {fileID: 0}
+  floor_edge_right: {fileID: 0}
+  floor_edge_right_up: {fileID: 0}
+  floor_edge_up: {fileID: 0}
+  sizeF: 0.32
 --- !u!1 &1128470697
 GameObject:
   m_ObjectHideFlags: 0
