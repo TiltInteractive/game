@@ -716,7 +716,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0027270894, y: -0.019085245}
@@ -846,7 +846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 608526d325d034b488467473f18adbf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bullet: {fileID: 179591195449554614, guid: 88feea4e4f1d16544812a0b8fe2a31be, type: 3}
+  Bullet: {fileID: 0}
   part: 1
   level: 1
   edge: {fileID: 1902182639, guid: 5a583f08cec1d284385df39bfaac660d, type: 3}
@@ -859,6 +859,7 @@ MonoBehaviour:
   floor_edge_right: {fileID: 0}
   floor_edge_right_up: {fileID: 0}
   floor_edge_up: {fileID: 0}
+  level_end: {fileID: -2141177348, guid: 5a583f08cec1d284385df39bfaac660d, type: 3}
   sizeF: 0.32
 --- !u!1 &1128470697
 GameObject:
