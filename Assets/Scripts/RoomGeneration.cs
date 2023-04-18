@@ -5,8 +5,9 @@ using UnityEngine;
 public class RoomGeneration : MonoBehaviour
 
 {
+
     public GameObject Bullet;
-    public int part = 1;
+    static public int part = 1;
     static public int level = 1;
     public Sprite edge;
     public Sprite floor;
@@ -20,10 +21,24 @@ public class RoomGeneration : MonoBehaviour
     public Sprite floor_edge_up;
     public Sprite level_end;
     public float sizeF = 0.32f;
-
+    public Sprite[] spriteArray;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
+
     {
+
+        spriteArray = Resources.LoadAll<Sprite>("room/room_sheet");
+        edge = spriteArray[0];
+        floor = spriteArray [5];
+        floor_edge_left_up = spriteArray[1];
+        floor_edge_left = spriteArray[4];
+        floor_edge_left_down = spriteArray[7];
+        floor_edge_down = spriteArray[8];
+        floor_edge_right_down = spriteArray[9];
+        floor_edge_right = spriteArray[6];
+        floor_edge_right_up = spriteArray[3];
+        floor_edge_up = spriteArray[2];
+        level_end = floor_edge_right;
         RoomGen();
     }
 
@@ -94,10 +109,12 @@ public class RoomGeneration : MonoBehaviour
         if(s == "*") {
             newBlock.AddComponent<BoxCollider2D>();
             newBlock.GetComponent<BoxCollider2D>().size = new Vector2(sizeF, sizeF);
+
         }
         else if(s == "+") {
             newBlock.AddComponent<BoxCollider2D>();
-            newBlock.GetComponent<BoxCollider2D>().size = new Vector2(sizeF, sizeF);
+            newBlock.GetComponent<BoxCollider2D>().offset = new Vector2(0.375f*sizeF, -0.5f*sizeF);
+            newBlock.GetComponent<BoxCollider2D>().size = new Vector2(0.25f*sizeF, 2*sizeF);
             newBlock.GetComponent<BoxCollider2D>().isTrigger = true;
             newBlock.AddComponent<LevelEnd>();
             
@@ -125,8 +142,8 @@ public class RoomGeneration : MonoBehaviour
                     pos.x = i;
                     pos.y = j;
                     roomPlacement("*", pos);
-                }
-
+                } 
+                
                 else if (i == 0 || i == lenght - 1)
                 {
                     if (((i == 0) && (j == 2 || j == 3)))
@@ -135,12 +152,13 @@ public class RoomGeneration : MonoBehaviour
                         pos.y = j;
                         roomPlacement("-", pos);
                     }
-                    else if ((i == lenght - 1) && (j == width - 3 || j == width - 4))
+                    else if ((i == lenght - 1) && (j == width - 4))
                     {
                         pos.x = i;
                         pos.y = j;
                         roomPlacement("+", pos);
                     }
+                    else if((j == width - 3) && (i == lenght - 1)){}
                     else
                     {
                         pos.x = i;

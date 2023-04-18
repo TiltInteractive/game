@@ -349,6 +349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionDamage: 10
   collisionTag: Player
+  itime: 10
 --- !u!1 &147326671
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,7 +524,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &147326680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,6 +555,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  isInvincible: 0
+  invincibilityDurationSeconds: 1
 --- !u!114 &147326682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,7 +703,7 @@ GameObject:
   - component: {fileID: 576741619}
   m_Layer: 8
   m_Name: "\u043A\u0430\u043C\u0435\u043D\u044C"
-  m_TagString: Untagged
+  m_TagString: obsticle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -716,7 +718,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0027270894, y: -0.019085245}
@@ -847,8 +849,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 0}
-  part: 1
-  level: 1
   edge: {fileID: 1902182639, guid: 5a583f08cec1d284385df39bfaac660d, type: 3}
   floor: {fileID: -1435790171, guid: 5a583f08cec1d284385df39bfaac660d, type: 3}
   floor_edge_left_up: {fileID: 135289705, guid: 5a583f08cec1d284385df39bfaac660d, type: 3}
@@ -861,6 +861,7 @@ MonoBehaviour:
   floor_edge_up: {fileID: 0}
   level_end: {fileID: -2141177348, guid: 5a583f08cec1d284385df39bfaac660d, type: 3}
   sizeF: 0.32
+  spriteArray: []
 --- !u!1 &1128470697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,6 +1092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionDamage: 10
   collisionTag: Player
+  itime: 10
 --- !u!114 &1390665736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1115,7 +1117,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.01, y: 0}

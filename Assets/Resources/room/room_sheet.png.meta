@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5a583f08cec1d284385df39bfaac660d
+guid: d02e50d833831564a9b3547aefae34fe
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -117,28 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player_outdated
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2016
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b9d9c85959af29e4ea0f5be251962bda
-      internalID: -690010903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wall
+      name: room_sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -146,20 +125,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6abc1544e0676ee40a37acbecbb975ba
-      internalID: 108936188
+      spriteID: 988e5081a66b6e549ae38809dab9739f
+      internalID: -1489827873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_corner_left_top
+      name: room_sheet_1
       rect:
         serializedVersion: 2
         x: 0
@@ -167,20 +146,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9f1b1673733c7549aacf49bad693f8d
-      internalID: 944087586
+      spriteID: 06c7460d8f733314a9fb68eb709d2ebe
+      internalID: 1260193597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_edge_top
+      name: room_sheet_2
       rect:
         serializedVersion: 2
         x: 32
@@ -188,20 +167,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6f837cf544db104f8f421bb9b0e09b7
-      internalID: -1640479980
+      spriteID: 9563b93d0fb4dbf4e86c51bcdfd017ae
+      internalID: 1325815054
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_corner_right_top
+      name: room_sheet_3
       rect:
         serializedVersion: 2
         x: 64
@@ -209,20 +188,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26f4787b806be6f4ca435ce1cb6e603f
-      internalID: -1145054958
+      spriteID: e6448b682feecec4ab467510738f2c32
+      internalID: 1833666785
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_edge_left
+      name: room_sheet_4
       rect:
         serializedVersion: 2
         x: 0
@@ -230,20 +209,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fb850216f7cb7b4e829f51bfcca146e
-      internalID: 1437060226
+      spriteID: 6564ea25130594e439d54de562ea4894
+      internalID: 1373776086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_middle
+      name: room_sheet_5
       rect:
         serializedVersion: 2
         x: 32
@@ -251,20 +230,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf42f67050dcce44b8d20bcd26c5a6b9
-      internalID: 1769977799
+      spriteID: 41893c412e4b8a640a2f487eb169377e
+      internalID: -952283987
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_edge_right
+      name: room_sheet_6
       rect:
         serializedVersion: 2
         x: 64
@@ -272,20 +251,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fc205c1c6c110c4f879067a4b68135e
-      internalID: 420983518
+      spriteID: 86de786614a719548a4cc306298e3e3e
+      internalID: 876150187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_corner_left_bottom
+      name: room_sheet_7
       rect:
         serializedVersion: 2
         x: 0
@@ -293,20 +272,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43d860d615abf324bbee2866c9c48a61
-      internalID: -220216738
+      spriteID: 4ee637caa66dc7c4d8a106ec57d42ccf
+      internalID: -2072040294
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_edge_bottom
+      name: room_sheet_8
       rect:
         serializedVersion: 2
         x: 32
@@ -314,20 +293,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c602bb5d43226364a8630cdccf7f5fd3
-      internalID: -412691130
+      spriteID: 7f61fdd229f92f74ea3617b6fad8ad52
+      internalID: -401928768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: floor_corner_right_bottom
+      name: room_sheet_9
       rect:
         serializedVersion: 2
         x: 64
@@ -335,14 +314,14 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75784bb1e19fc1f4a94ad15e58e7f4d3
-      internalID: -266523030
+      spriteID: 82a5bd10847993845895fafe3b097fbd
+      internalID: -267895758
       vertices: []
       indices: 
       edges: []
@@ -358,17 +337,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      floor_edge_top: -1640479980
-      floor_edge_left: 1437060226
-      floor_edge_bottom: -412691130
-      floor_middle: 1769977799
-      floor_corner_left_bottom: -220216738
-      floor_corner_left_top: 944087586
-      wall: 108936188
-      floor_corner_right_bottom: -266523030
-      floor_corner_right_top: -1145054958
-      floor_edge_right: 420983518
-      player_outdated: -690010903
+      room_sheet_3: 1833666785
+      room_sheet_5: -952283987
+      room_sheet_6: 876150187
+      room_sheet_0: -1489827873
+      room_sheet_1: 1260193597
+      room_sheet_9: -267895758
+      room_sheet_2: 1325815054
+      room_sheet_7: -2072040294
+      room_sheet_4: 1373776086
+      room_sheet_8: -401928768
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

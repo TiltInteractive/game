@@ -7,7 +7,7 @@ public class CollisionDamage : MonoBehaviour
     // Start is called before the first frame update
     public int collisionDamage = 10;
     public string collisionTag;
-
+    public float itime = 10;
 
     void Start()
     {
@@ -19,13 +19,26 @@ public class CollisionDamage : MonoBehaviour
     {
         
     }
-        private void OnCollisionEnter2D(Collision2D coll)
+
+    private IEnumerator damage(Collider2D coll){
+         if (coll.gameObject.tag == collisionTag)
         {
-            if (coll.gameObject.tag == collisionTag)
-            {
-                Debug.Log("coll");
-                PlayerHealth health = coll.gameObject.GetComponent<PlayerHealth>();
-                health.takeDamage(collisionDamage);
-            }
+            Debug.Log("coll");
+            PlayerHealth health = coll.gameObject.GetComponent<PlayerHealth>();
+            
+            health.takeDamage(collisionDamage);
+            yield return new WaitForSeconds(0.1f);
         }
+    }
+    private void OnTriggerStay2D(Collider2D coll)
+    {
+        
+        StartCoroutine(damage(coll));
+
+    }
+
+    void OnCollisionExit2D(Collision2D enemy)
+    {
+        StopAllCoroutines();
+    }
 }

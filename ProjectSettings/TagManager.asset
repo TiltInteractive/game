@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - roomComponent
+  - obsticle
   layers:
   - Default
   - TransparentFX
