@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - roomComponent
   - obsticle
+  - UI_med
+  - UI
   layers:
   - Default
   - TransparentFX
@@ -16,9 +18,9 @@ TagManager:
   - UI
   - Block
   - Creature
-  - mesh
-  - bullet
-  - 
+  - Enemy
+  - Mesh
+  - Bullet
   - 
   - 
   - 

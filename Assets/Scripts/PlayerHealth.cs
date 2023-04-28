@@ -27,8 +27,12 @@ public class PlayerHealth : MonoBehaviour
         
         
         if (health <= 0)
+
         {
-            Destroy(gameObject);
+            var anim = GetComponent<Animator>();
+            anim.Play("Player_death");
+
+            // Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
         }
         StartCoroutine(BecomeTemporarilyInvincible());
     }

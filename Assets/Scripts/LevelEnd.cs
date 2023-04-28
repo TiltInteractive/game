@@ -11,19 +11,23 @@ public class LevelEnd : MonoBehaviour
 
     GameObject[] gameObjects;
     void OnTriggerEnter2D(Collider2D other) {
-        other.transform.position = new_position;
-        Debug.Log("1");
+        if (other.gameObject.tag == "Player")
+        {
+            other.transform.position = new_position;
+            Debug.Log("1");
 
-        gameObjects =  GameObject.FindGameObjectsWithTag("roomComponent");
+            gameObjects = GameObject.FindGameObjectsWithTag("roomComponent");
 
-        foreach (var go in gameObjects)  {
-            Destroy(go); }
-        
-        RoomGeneration.level += 1;
-        RoomGeneration.part += 1;
-        clone_room();
-        Debug.Log(RoomGeneration.level);
-        Debug.Log(RoomGeneration.part);
+            foreach (var go in gameObjects)
+            {
+                Destroy(go);
+            }
+
+            RoomGeneration.level += 1;
+            clone_room();
+            Debug.Log(RoomGeneration.level);
+            Debug.Log(RoomGeneration.part);
+        }
         
     }
 

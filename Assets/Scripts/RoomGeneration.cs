@@ -27,7 +27,7 @@ public class RoomGeneration : MonoBehaviour
 
     {
 
-        spriteArray = Resources.LoadAll<Sprite>("room/room_sheet");
+        spriteArray = Resources.LoadAll<Sprite>("Textures/room/room_sheet");
         edge = spriteArray[0];
         floor = spriteArray [5];
         floor_edge_left_up = spriteArray[1];
@@ -98,7 +98,7 @@ public class RoomGeneration : MonoBehaviour
     private void create(Sprite sprite, Vector2 pos, string s) {
         Vector2 size = new Vector2(1, 1);
         pos.x = pos.x * sizeF;
-        pos.y = pos.y * -sizeF;
+        pos.y = pos.y * -sizeF + 0.64f;
         Vector2 position = pos;
         
         
@@ -124,13 +124,15 @@ public class RoomGeneration : MonoBehaviour
         
     }
 
-
+    public float randN() {
+        return Random.Range(1.0f, 2.0f);
+    }
     public void RoomGen()
     {
         Vector2 pos;
-        
 
-        double lenght = 14 * Mathf.Sqrt(part * level), width = 8 * Mathf.Sqrt(part * level);
+        float rand = randN();
+        double lenght = 14 * Mathf.Pow(part * level* rand, 1.0f/3.0f), width = 8 * Mathf.Pow(part * level * rand, 1.0f / 3.0f);
         lenght = (int)(lenght);
         width = (int)(width);
         for (int j = 0; j < width; j++)
