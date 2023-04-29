@@ -17,8 +17,11 @@ public class ShootScript : MonoBehaviour
 
     public Transform Shootpoint;
     void Start()
+
     {
+        Gun = this.gameObject.transform.parent;
         Gun.transform.localScale = new Vector3(-1, 1, 1);
+        Shootpoint = this.gameObject.transform.GetChild(0);
 
     }
 
