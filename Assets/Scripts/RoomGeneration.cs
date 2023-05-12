@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 public class RoomGeneration : MonoBehaviour
 
 {
-
+    static public int lenght_public, width_public;
     public GameObject Bullet;
     static public int part = 1;
     static public int level = 1;
@@ -20,13 +22,19 @@ public class RoomGeneration : MonoBehaviour
     public Sprite floor_edge_right_up;
     public Sprite floor_edge_up;
     public Sprite level_end;
+
+    public Sprite box;
+    int[,] occupied_cells = new int[1000, 1000];
+
     public float sizeF = 0.32f;
+    double lenght;
+    double width;
     public Sprite[] spriteArray;
     // Start is called before the first frame update
     public void Start()
 
     {
-
+        box = Resources.Load<Sprite>("Textures/sprites/box");
         spriteArray = Resources.LoadAll<Sprite>("Textures/room/room_sheet");
         edge = spriteArray[0];
         floor = spriteArray [5];
@@ -39,7 +47,14 @@ public class RoomGeneration : MonoBehaviour
         floor_edge_right_up = spriteArray[3];
         floor_edge_up = spriteArray[2];
         level_end = floor_edge_right;
+        
+
+
         RoomGen();
+        /*int[,] occupied_cells = new int[width_public, lenght_public];*/
+        ObsticleGeneration();
+
+        
     }
 
     public void roomPlacement(string s, Vector2 pos)
@@ -95,7 +110,7 @@ public class RoomGeneration : MonoBehaviour
 
     }
 
-    private void create(Sprite sprite, Vector2 pos, string s) {
+    public void create(Sprite sprite, Vector2 pos, string s) {
         Vector2 size = new Vector2(1, 1);
         pos.x = pos.x * sizeF;
         pos.y = pos.y * -sizeF + 0.64f;
@@ -124,6 +139,26 @@ public class RoomGeneration : MonoBehaviour
         
     }
 
+    public void Create_ob(Sprite sprite, Vector2 pos)
+    {
+        Vector2 size = new Vector2(1, 1);
+        pos.x = pos.x * sizeF;
+        pos.y = pos.y * -sizeF + 0.64f;
+        Vector2 position = pos;
+
+
+        GameObject newBlock = new GameObject("roomComponent");
+        newBlock.gameObject.tag = "roomComponent";
+        newBlock.transform.position = position;
+        newBlock.transform.localScale = size;
+
+        newBlock.AddComponent<BoxCollider2D>();
+        newBlock.GetComponent<BoxCollider2D>().size = new Vector2(sizeF, sizeF);
+
+        SpriteRenderer renderer = newBlock.AddComponent<SpriteRenderer>();
+        renderer.sprite = sprite;
+    }
+
     public float randN() {
         return Random.Range(1.0f, 2.0f);
     }
@@ -132,9 +167,12 @@ public class RoomGeneration : MonoBehaviour
         Vector2 pos;
 
         float rand = randN();
-        double lenght = 14 * Mathf.Pow(part * level* rand, 1.0f/3.0f), width = 8 * Mathf.Pow(part * level * rand, 1.0f / 3.0f);
+        lenght = 14 * Mathf.Pow(part * level * rand, 1.0f / 3.0f);
+        width = 8 * Mathf.Pow(part * level * rand, 1.0f / 3.0f);
         lenght = (int)(lenght);
         width = (int)(width);
+        lenght_public = (int)(lenght);
+        width_public = (int)(width);
         for (int j = 0; j < width; j++)
         {
             for (int i = 0; i < lenght; i++)
@@ -233,6 +271,73 @@ public class RoomGeneration : MonoBehaviour
                 }
             }
         }
+
+    }
+
+
+    void ObsticleGeneration()
+    {
+        
+
+        void Obsticle1(int y, int x) {
+            Vector2 pos = new Vector2(x, y);
+            occupied_cells[y, x] = 1;
+            Create_ob(box, pos);
+            pos.y += 1;
+            occupied_cells[y+1, x] = 1;
+            Create_ob(box, pos);
+            pos.y += 1;
+            occupied_cells[y+2, x] = 1;
+            Create_ob(box, pos);
+            
+        }
+
+        void Obsticle2(int y, int x)
+        {
+            Vector2 pos = new Vector2(x, y);
+            occupied_cells[y, x] = 1;
+            Create_ob(box, pos);
+            pos.x += 1;
+            occupied_cells[y, x+1] = 1;
+            Create_ob(box, pos);
+            pos.x += 1;
+            occupied_cells[y, x+2] = 1;
+            Create_ob(box, pos);
+        }
+
+        void Obsticle3(int y, int x)
+        {
+            Vector2 pos = new Vector2(x, y);
+            occupied_cells[y, x] = 1;
+            Create_ob(box, pos);
+            pos.x += 1;
+            occupied_cells[y, x + 1] = 1;
+            Create_ob(box, pos);
+            pos.y += 1;
+            occupied_cells[y + 1, x + 1] = 1;
+            Create_ob(box, pos);
+        }
+
+        for (int j = 2; j < width-3; j+=3)
+        {
+            for (int i = 2; i < lenght-3; i+=4)
+            {
+/*                float gen_or_non = Random.Range(0.0f, 1.0f);*/
+                if (Random.Range(0.0f, 1.0f) < 0.6f)
+                {
+                    int why_gen = Random.Range(0, 3);
+                    if (why_gen == 0) Obsticle1(j, i);
+                    else if (why_gen == 1) Obsticle2(j, i);
+                    else if (why_gen == 2) Obsticle3(j, i);
+                }
+                else
+                {
+                    /*Vector2 pos = new Vector2(i, j);
+                    create(edge, pos, "*");*/
+                }
+            }
+        }
+
 
     }
 
