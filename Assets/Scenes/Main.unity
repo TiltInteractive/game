@@ -854,6 +854,7 @@ MonoBehaviour:
   floor_edge_right_up: {fileID: 0}
   floor_edge_up: {fileID: 0}
   level_end: {fileID: -2141177348, guid: 5a583f08cec1d284385df39bfaac660d, type: 3}
+  box: {fileID: 21300000, guid: ae74653047a7f244dbb2b8886b16d186, type: 3}
   sizeF: 0.32
   spriteArray: []
 --- !u!1 &893109792
@@ -1288,6 +1289,7 @@ GameObject:
   - component: {fileID: 1390665741}
   - component: {fileID: 1390665740}
   - component: {fileID: 1390665742}
+  - component: {fileID: 1390665744}
   - component: {fileID: 1390665743}
   m_Layer: 8
   m_Name: Doomer (1)
@@ -1490,6 +1492,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1390665744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390665734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 064efb3ae8937154e99a2995d16d4426, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  part: {fileID: 1697115136}
+  damage: 10
+  enemyTag: 
 --- !u!1 &1429799613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,7 +1787,7 @@ GameObject:
   - component: {fileID: 1697115137}
   - component: {fileID: 1697115136}
   - component: {fileID: 1697115135}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
