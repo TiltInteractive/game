@@ -29,10 +29,10 @@ public class ShootScript : MonoBehaviour
     void Update()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        direction = mousePos - (Vector2)Gun.position;
+       
         FaceMouse();
-
-        if(Input.GetMouseButtonDown(0))
+        direction = mousePos - (Vector2)Gun.position;
+        if (Input.GetMouseButtonDown(0))
         {
             Shoot();
         }
