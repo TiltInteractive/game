@@ -161,6 +161,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 5925772282017663382, guid: 3d37adeee687dea4d930ab4ed8d8562b, type: 3}
+      propertyPath: itemsCount.Array.data[1]
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5925772282017663384, guid: 3d37adeee687dea4d930ab4ed8d8562b, type: 3}
       propertyPath: m_SortingOrder
       value: 4
@@ -498,6 +502,10 @@ PrefabInstance:
       propertyPath: shopMenu
       value: 
       objectReference: {fileID: 1629408248}
+    - target: {fileID: 8384514973272471595, guid: 9361a4ff932d15c43bf55f4f60679a74, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8384514973272471596, guid: 9361a4ff932d15c43bf55f4f60679a74, type: 3}
       propertyPath: m_Size.x
       value: 1.32

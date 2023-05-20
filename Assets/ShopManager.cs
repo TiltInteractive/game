@@ -17,4 +17,10 @@ public class ShopManager : MonoBehaviour
     {
         
     }
+
+    private void OnMouseEnter(Collision2D coll)
+    {
+        Debug.Log("ooopa");
+    }
+
 }
