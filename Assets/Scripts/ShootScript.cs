@@ -32,10 +32,10 @@ public class ShootScript : MonoBehaviour
        
         FaceMouse();
         direction = mousePos - (Vector2)Gun.position;
-        if (Input.GetMouseButtonDown(0))
+/*        if (Input.GetMouseButtonDown(0))
         {
             Shoot();
-        }
+        }*/
     }
 
     void Shoot()

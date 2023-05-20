@@ -22,10 +22,11 @@ public class RoomGeneration : MonoBehaviour
     public Sprite floor_edge_right_up;
     public Sprite floor_edge_up;
     public Sprite level_end;
-
+    public int gapVertical = 4;
+    public int gapHorizontal = 3;
     public Sprite box;
     int[,] occupied_cells = new int[1000, 1000];
-
+    public int n = 1;
     public float sizeF = 0.32f;
     double lenght;
     double width;
@@ -156,7 +157,10 @@ public class RoomGeneration : MonoBehaviour
         newBlock.GetComponent<BoxCollider2D>().size = new Vector2(sizeF, sizeF);
 
         SpriteRenderer renderer = newBlock.AddComponent<SpriteRenderer>();
+        n = n + 1;
+        renderer.sortingOrder = n;
         renderer.sprite = sprite;
+
     }
 
     public float randN() {
@@ -318,9 +322,9 @@ public class RoomGeneration : MonoBehaviour
             Create_ob(box, pos);
         }
 
-        for (int j = 2; j < width-3; j+=3)
+        for (int j = 2; j < width-3; j+=gapVertical)
         {
-            for (int i = 2; i < lenght-3; i+=4)
+            for (int i = 2; i < lenght-3; i+=gapHorizontal)
             {
 /*                float gen_or_non = Random.Range(0.0f, 1.0f);*/
                 if (Random.Range(0.0f, 1.0f) < 0.6f)
