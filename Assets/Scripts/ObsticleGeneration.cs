@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ObsticleGeneration : MonoBehaviour
 {
-    public Sprite box;
+    public GameObject box;
     public Sprite[] spriteArray;
     public RoomGeneration Roomg = new RoomGeneration();
 
@@ -17,7 +17,7 @@ public class ObsticleGeneration : MonoBehaviour
         Generation(box);
     }
 
-    void Generation (Sprite boxx)
+    void Generation (GameObject boxx)
     {
         Vector2 pos = new Vector2(2, 2);
 

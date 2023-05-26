@@ -11,44 +11,43 @@ public class RoomGeneration : MonoBehaviour
     public GameObject Bullet;
     static public int part = 1;
     static public int level = 1;
-    public Sprite edge;
-    public Sprite floor;
-    public Sprite floor_edge_left_up;
-    public Sprite floor_edge_left;
-    public Sprite floor_edge_left_down;
-    public Sprite floor_edge_down;
-    public Sprite floor_edge_right_down;
-    public Sprite floor_edge_right;
-    public Sprite floor_edge_right_up;
-    public Sprite floor_edge_up;
-    public Sprite level_end;
+    public GameObject edge;
+    public GameObject floor;
+    public GameObject floor_edge_left_up;
+    public GameObject floor_edge_left;
+    public GameObject floor_edge_left_down;
+    public GameObject floor_edge_down;
+    public GameObject floor_edge_right_down;
+    public GameObject floor_edge_right;
+    public GameObject floor_edge_right_up;
+    public GameObject floor_edge_up;
+    public GameObject level_end;
     public int gapVertical = 4;
     public int gapHorizontal = 3;
-    public Sprite box;
+    public GameObject box;
     int[,] occupied_cells = new int[1000, 1000];
     public int n = 1;
     public float sizeF = 0.32f;
     double lenght;
     double width;
-    public Sprite[] spriteArray;
     // Start is called before the first frame update
     public void Start()
 
     {
-        box = Resources.Load<Sprite>("Textures/sprites/box");
-        spriteArray = Resources.LoadAll<Sprite>("Textures/room/room_sheet");
-        edge = spriteArray[0];
-        floor = spriteArray [5];
-        floor_edge_left_up = spriteArray[1];
-        floor_edge_left = spriteArray[4];
-        floor_edge_left_down = spriteArray[7];
-        floor_edge_down = spriteArray[8];
-        floor_edge_right_down = spriteArray[9];
-        floor_edge_right = spriteArray[6];
-        floor_edge_right_up = spriteArray[3];
-        floor_edge_up = spriteArray[2];
-        level_end = floor_edge_right;
-        
+        box = Resources.Load<GameObject>("Prefab/RoomComponents/box");
+        edge = Resources.Load<GameObject>("Prefab/RoomComponents/edge");
+        floor = Resources.Load<GameObject>("Prefab/RoomComponents/floor");
+        floor_edge_left_up = Resources.Load<GameObject>("Prefab/RoomComponents/floor_edge_left_up");
+        floor_edge_left = Resources.Load<GameObject>("Prefab/RoomComponents/floor_edge_left");   
+        floor_edge_left_down = Resources.Load<GameObject>("Prefab/RoomComponents/floor_edge_left_down");
+        floor_edge_down = Resources.Load<GameObject>("Prefab/RoomComponents/floor_edge_down");
+        floor_edge_right_down = Resources.Load<GameObject>("Prefab/RoomComponents/floor_edge_right_down");
+        floor_edge_right = Resources.Load<GameObject>("Prefab/RoomComponents/floor_edge_right");
+        floor_edge_right_up = Resources.Load<GameObject>("Prefab/RoomComponents/floor_edge_right_up");
+        floor_edge_up = Resources.Load<GameObject>("Prefab/RoomComponents/floor_edge_up");
+        level_end = Resources.Load<GameObject>("Prefab/RoomComponents/level_end");
+
+
 
 
         RoomGen();
@@ -111,23 +110,35 @@ public class RoomGeneration : MonoBehaviour
 
     }
 
-    public void create(Sprite sprite, Vector2 pos, string s) {
+    public void create(GameObject newBlock, Vector2 pos, string s) {
         Vector2 size = new Vector2(1, 1);
         pos.x = pos.x * sizeF;
         pos.y = pos.y * -sizeF + 0.64f;
         Vector2 position = pos;
-        
-        
-        GameObject newBlock = new GameObject("roomComponent");
+
+        if (s == "+")
+        {
+            pos.y -= 0.16f;
+            newBlock.GetComponent<BoxCollider2D>().isTrigger = true;
+        }
+
+        newBlock.tag = "roomComponent";
+        Instantiate(newBlock, pos, Quaternion.identity);
+
+        /*GameObject newBlock = new GameObject("roomComponent");
         newBlock.gameObject.tag = "roomComponent";
         newBlock.transform.position = position;
         newBlock.transform.localScale = size;
-        if(s == "*") {
-            newBlock.AddComponent<BoxCollider2D>();
-            newBlock.GetComponent<BoxCollider2D>().size = new Vector2(sizeF, sizeF);
+        newBlock.layer = LayerMask.NameToLayer("Mesh");*/
 
-        }
-        else if(s == "+") {
+
+        /* if (s == "*") {
+             Instantiate(gameobj, pos, Quaternion.identity);
+
+         }*/
+
+
+        /*else if(s == "+") {
             newBlock.AddComponent<BoxCollider2D>();
             newBlock.GetComponent<BoxCollider2D>().offset = new Vector2(0.375f*sizeF, -0.5f*sizeF);
             newBlock.GetComponent<BoxCollider2D>().size = new Vector2(0.25f*sizeF, 2*sizeF);
@@ -136,30 +147,19 @@ public class RoomGeneration : MonoBehaviour
             
         }
         SpriteRenderer renderer = newBlock.AddComponent<SpriteRenderer>();
-        renderer.sprite = sprite;
-        
+        renderer.sprite = sprite;*/
+
     }
 
-    public void Create_ob(Sprite sprite, Vector2 pos)
+    public void Create_ob(GameObject newBlock, Vector2 pos)
     {
         Vector2 size = new Vector2(1, 1);
         pos.x = pos.x * sizeF;
         pos.y = pos.y * -sizeF + 0.64f;
         Vector2 position = pos;
 
-
-        GameObject newBlock = new GameObject("roomComponent");
-        newBlock.gameObject.tag = "roomComponent";
-        newBlock.transform.position = position;
-        newBlock.transform.localScale = size;
-
-        newBlock.AddComponent<BoxCollider2D>();
-        newBlock.GetComponent<BoxCollider2D>().size = new Vector2(sizeF, sizeF);
-
-        SpriteRenderer renderer = newBlock.AddComponent<SpriteRenderer>();
-        n = n + 1;
-        renderer.sortingOrder = n;
-        renderer.sprite = sprite;
+        newBlock.tag = "roomComponent";
+        Instantiate(newBlock, pos, Quaternion.identity);
 
     }
 

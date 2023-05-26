@@ -5,9 +5,15 @@ using UnityEngine;
 
 public class LevelEnd : MonoBehaviour
 {
-    public Vector2 new_position = new Vector2(0, -0.65f);
+    public Vector2 new_position;
     public Scene newScene;
-    public RoomGeneration Rmg = new RoomGeneration();
+    public RoomGeneration Rmg;
+    public void Start()
+    {
+        new_position = new Vector2(0, -0.65f);
+        Rmg = new RoomGeneration();
+    }
+    
 
     GameObject[] gameObjects;
     void OnTriggerEnter2D(Collider2D other) {
