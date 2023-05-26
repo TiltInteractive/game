@@ -113,7 +113,7 @@ public class RoomGeneration : MonoBehaviour
     public void create(GameObject newBlock, Vector2 pos, string s) {
         Vector2 size = new Vector2(1, 1);
         pos.x = pos.x * sizeF;
-        pos.y = pos.y * -sizeF + 0.64f;
+        pos.y = pos.y * -sizeF;
         Vector2 position = pos;
 
         if (s == "+")
@@ -155,7 +155,7 @@ public class RoomGeneration : MonoBehaviour
     {
         Vector2 size = new Vector2(1, 1);
         pos.x = pos.x * sizeF;
-        pos.y = pos.y * -sizeF + 0.64f;
+        pos.y = pos.y * -sizeF;
         Vector2 position = pos;
 
         newBlock.tag = "roomComponent";
