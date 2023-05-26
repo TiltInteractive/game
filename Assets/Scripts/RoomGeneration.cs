@@ -122,7 +122,8 @@ public class RoomGeneration : MonoBehaviour
         newBlock.gameObject.tag = "roomComponent";
         newBlock.transform.position = position;
         newBlock.transform.localScale = size;
-        if(s == "*") {
+        newBlock.layer = LayerMask.NameToLayer("Mesh");
+        if (s == "*") {
             newBlock.AddComponent<BoxCollider2D>();
             newBlock.GetComponent<BoxCollider2D>().size = new Vector2(sizeF, sizeF);
 
@@ -152,7 +153,7 @@ public class RoomGeneration : MonoBehaviour
         newBlock.gameObject.tag = "roomComponent";
         newBlock.transform.position = position;
         newBlock.transform.localScale = size;
-
+        newBlock.layer = LayerMask.NameToLayer("Mesh");
         newBlock.AddComponent<BoxCollider2D>();
         newBlock.GetComponent<BoxCollider2D>().size = new Vector2(sizeF, sizeF);
 
