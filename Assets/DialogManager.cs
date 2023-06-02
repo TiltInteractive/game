@@ -54,21 +54,29 @@ public class DialogManager : MonoBehaviour
         }
     }
     // Update is called once per frame
+    public void DialogStart ()
+    {
+        Dialog.SetActive(false);
+        shopMenu.SetActive(dialogStat);
+        movementToggle(false);
+    }
+    public void DialogExit()
+    {
+        Dialog.SetActive(true);
+        shopMenu.SetActive(false);
+        movementToggle(true);
+    }
     void Update()
     {
         if (dialogStat)
         {
             if (Input.GetKeyDown(KeyCode.T))
             {
-                Dialog.SetActive(false);
-                shopMenu.SetActive(dialogStat);
-                movementToggle(false);
+                DialogStart();
             }
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Dialog.SetActive(true);
-                shopMenu.SetActive(false);
-                movementToggle(true);
+                DialogExit();
             }
 
         }

@@ -7,6 +7,7 @@ using static UnityEditor.PlayerSettings;
 public class RoomGeneration : MonoBehaviour
 
 {
+    public bool shop = false;
     static public int lenght_public, width_public;
     public GameObject Bullet;
     static public int part = 1;

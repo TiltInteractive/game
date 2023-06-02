@@ -15,11 +15,17 @@ public class ItemCount : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Tag == "med") {
             i = 0;
+            GetComponent<TMP_Text>().text = (obj.GetComponent<Inventory>().QuantityItem(i)).ToString();
         }
-        GetComponent<TMP_Text>().text = (obj.GetComponent<Inventory>().QuantityItem(i)).ToString();
+        if (Tag == "coin")
+        {
+            i = 2;
+            GetComponent<TMP_Text>().text = (obj.GetComponent<Inventory>().QuantityItem(i)).ToString();
+        }
+        
     }
 }
