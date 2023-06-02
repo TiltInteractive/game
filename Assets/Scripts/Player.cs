@@ -22,8 +22,9 @@ public class Player : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        rb.gameObject.transform.position = new Vector2(0, -0.65f);
 
-      //  boxCollider = GetComponent<BoxCollider2D>();
+        //  boxCollider = GetComponent<BoxCollider2D>();
     }
 
     private void Update() {
