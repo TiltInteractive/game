@@ -1,3 +1,4 @@
+using NavMeshPlus.Components;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -31,6 +32,8 @@ public class RoomGeneration : MonoBehaviour
     public float sizeF = 0.32f;
     double lenght;
     double width;
+
+    public NavMeshSurface Surface2D;
     // Start is called before the first frame update
     public void Start()
 
@@ -55,7 +58,7 @@ public class RoomGeneration : MonoBehaviour
         /*int[,] occupied_cells = new int[width_public, lenght_public];*/
         ObsticleGeneration();
 
-        
+        /*Surface2D.BuildNavMeshAsync();*/
     }
 
     public void roomPlacement(string s, Vector2 pos)
