@@ -5415,6 +5415,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2277933506781286516, guid: d2912e740bff34743bceb7a2ce0fd39a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277933506781286517, guid: d2912e740bff34743bceb7a2ce0fd39a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2277933506781286525, guid: d2912e740bff34743bceb7a2ce0fd39a, type: 3}
       propertyPath: m_Name
       value: Doomer (1)
@@ -5425,9 +5433,10 @@ PrefabInstance:
       objectReference: {fileID: 147326671}
     - target: {fileID: 9222121829414430750, guid: d2912e740bff34743bceb7a2ce0fd39a, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2277933506781286514, guid: d2912e740bff34743bceb7a2ce0fd39a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d2912e740bff34743bceb7a2ce0fd39a, type: 3}
 --- !u!1001 &2498797712370138163
 PrefabInstance:
