@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public class AgentMovement : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class AgentMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
+        player = GameObject.Find("Player");
+
     }
 
     private void Update()
@@ -23,9 +26,12 @@ public class AgentMovement : MonoBehaviour
 
     private void SetTargetPosition()
     {
-        Vector2 tpos;
+        /*Vector2 tpos;
         tpos.x = player.GetComponent<Rigidbody2D>().position.x;
-        tpos.y = player.GetComponent<Rigidbody2D>().position.y;
-        agent.SetDestination(new Vector3(tpos.x, tpos.y, transform.position.z));
+        tpos.y = player.GetComponent<Rigidbody2D>().position.y;*/
+        if (player.transform.position.x > 0.32f)
+        {
+            agent.SetDestination(player.transform.position);
+        }
     }
 }
