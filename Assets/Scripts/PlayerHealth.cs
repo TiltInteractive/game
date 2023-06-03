@@ -31,8 +31,11 @@ public class PlayerHealth : MonoBehaviour
         {
             var anim = GetComponent<Animator>();
             anim.Play("Player_death");
-
-            // Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+            Player other = GetComponent<Player>();
+            Destroy(GameObject.Find("Gun"));
+            Destroy(other);
+            Destroy(gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+           
         }
         StartCoroutine(BecomeTemporarilyInvincible());
     }

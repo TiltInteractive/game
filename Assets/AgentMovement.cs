@@ -12,8 +12,8 @@ public class AgentMovement : MonoBehaviour
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.updatePosition = false;
         agent.updateRotation = false;
+        agent.updateUpAxis = false;
         player = GameObject.Find("Player");
 
     }
