@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public class AgentMovement : MonoBehaviour
 {
@@ -28,6 +29,9 @@ public class AgentMovement : MonoBehaviour
         /*Vector2 tpos;
         tpos.x = player.GetComponent<Rigidbody2D>().position.x;
         tpos.y = player.GetComponent<Rigidbody2D>().position.y;*/
-        agent.SetDestination(player.transform.position);
+        if (player.transform.position.x > 0.32f)
+        {
+            agent.SetDestination(player.transform.position);
+        }
     }
 }

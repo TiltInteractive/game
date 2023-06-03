@@ -24,6 +24,7 @@ public class RoomGeneration : MonoBehaviour
     public GameObject floor_edge_right_up;
     public GameObject floor_edge_up;
     public GameObject level_end;
+    public GameObject enemy;
     public int gapVertical = 4;
     public int gapHorizontal = 3;
     public GameObject box;
@@ -50,6 +51,7 @@ public class RoomGeneration : MonoBehaviour
         floor_edge_right_up = Resources.Load<GameObject>("Prefab/RoomComponents/floor_edge_right_up");
         floor_edge_up = Resources.Load<GameObject>("Prefab/RoomComponents/floor_edge_up");
         level_end = Resources.Load<GameObject>("Prefab/RoomComponents/level_end");
+        enemy = Resources.Load<GameObject>("Prefab/BzDoomer");
 
 
 
@@ -167,6 +169,18 @@ public class RoomGeneration : MonoBehaviour
 
     }
 
+    public void Create_enemy(GameObject newBlock, Vector2 pos)
+    {
+        Vector2 size = new Vector2(1, 1);
+        pos.x = pos.x * sizeF;
+        pos.y = pos.y * -sizeF;
+        Vector2 position = pos;
+
+        newBlock.tag = "Enemy";
+        Instantiate(newBlock, pos, Quaternion.identity);
+
+    }
+
     public float randN() {
         return Random.Range(1.0f, 2.0f);
     }
@@ -276,6 +290,11 @@ public class RoomGeneration : MonoBehaviour
                     pos.x = i;
                     pos.y = j;
                     roomPlacement(" ", pos);
+
+                    if (Random.Range(0.0f, 1.0f) < 0.05f * Mathf.Pow(part * level * rand, 1.0f / 3.0f))
+                    {
+                        Create_enemy(enemy, pos);
+                    }
                 }
             }
         }
@@ -340,6 +359,7 @@ public class RoomGeneration : MonoBehaviour
                 }
                 else
                 {
+                    
                     /*Vector2 pos = new Vector2(i, j);
                     create(edge, pos, "*");*/
                 }

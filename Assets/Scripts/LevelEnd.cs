@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEditor.Animations;
 
 public class LevelEnd : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class LevelEnd : MonoBehaviour
     public Scene newScene;
     public RoomGeneration Rmg;
     public bool Shop;
+    private GameObject[] enemies;
     public void Start()
     {
         Shop = GameObject.Find("room").GetComponent<RoomGeneration>().shop;
@@ -51,6 +53,29 @@ public class LevelEnd : MonoBehaviour
         RoomDestroy(other);
 
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            int i = 0;
+            enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+            i = enemies.Length;
+            if (i == 0)
+            {
+                Debug.Log("freee");
+                BoxCollider2D[] Cols;
+                Cols = GetComponents<BoxCollider2D>();
+                Cols[1].enabled = false;
+            }
+            else
+            {
+                Debug.Log("sosi");
+            }
+        }
+        
     }
 
     void clone_room(){
