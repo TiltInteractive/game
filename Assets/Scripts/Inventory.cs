@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
     2 - money
      
      */
+    public bool shop;
     public int[] items = new int[4] { 0, 1, 2, 3 };
     public int[] itemsCount = new int[4] { 0, 0, 0, 0 };
 

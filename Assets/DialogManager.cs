@@ -17,6 +17,14 @@ public class DialogManager : MonoBehaviour
         message[1] = "asdt";
         Dialog.SetActive(false);
         Debug.Log("Asdasd");
+        GameObject temp = GameObject.Find("Player");
+        Player ot = temp.GetComponent<Player>();
+        ot.enabled = false;
+
+        PlayerH other = temp.GetComponent<PlayerH>();
+        other.enabled = true;
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -43,7 +51,7 @@ public class DialogManager : MonoBehaviour
     void movementToggle(bool f)
     {
         GameObject temp = GameObject.Find("Player");
-        Player other = temp.GetComponent<Player>();
+        PlayerH other = temp.GetComponent<PlayerH>();
         if (f)
         {
             other.enabled = true;
