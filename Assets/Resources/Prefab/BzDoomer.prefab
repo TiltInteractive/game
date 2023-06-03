@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 9222121829414430750}
   - component: {fileID: 1925155797752505841}
   m_Layer: 8
-  m_Name: Doomer (1)
+  m_Name: BzDoomer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -227,7 +227,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 2277933506781286525}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1
+  m_Radius: 0.1
   m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
