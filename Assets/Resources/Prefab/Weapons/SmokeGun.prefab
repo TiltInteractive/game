@@ -75,6 +75,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmokeGun
       objectReference: {fileID: 0}
+    - target: {fileID: 8293948485613732522, guid: eab86dbd677e3e24c9867f9b267d9cd1, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8293948485613732533, guid: eab86dbd677e3e24c9867f9b267d9cd1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.139
@@ -82,6 +86,18 @@ PrefabInstance:
     - target: {fileID: 8293948485613732533, guid: eab86dbd677e3e24c9867f9b267d9cd1, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.011
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293948485613732533, guid: eab86dbd677e3e24c9867f9b267d9cd1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293948485613732533, guid: eab86dbd677e3e24c9867f9b267d9cd1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293948485613732533, guid: eab86dbd677e3e24c9867f9b267d9cd1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eab86dbd677e3e24c9867f9b267d9cd1, type: 3}
@@ -141,9 +157,69 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9029349959122465029, guid: b46de00bc3504884f9611b230277b67e, type: 3}
+      propertyPath: TriggerModule.enter
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029349959122465029, guid: b46de00bc3504884f9611b230277b67e, type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029349959122465029, guid: b46de00bc3504884f9611b230277b67e, type: 3}
+      propertyPath: TriggerModule.inside
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029349959122465029, guid: b46de00bc3504884f9611b230277b67e, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029349959122465029, guid: b46de00bc3504884f9611b230277b67e, type: 3}
+      propertyPath: CollisionModule.quality
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029349959122465029, guid: b46de00bc3504884f9611b230277b67e, type: 3}
+      propertyPath: TriggerModule.radiusScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029349959122465029, guid: b46de00bc3504884f9611b230277b67e, type: 3}
+      propertyPath: CollisionModule.m_Bounce.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029349959122465029, guid: b46de00bc3504884f9611b230277b67e, type: 3}
+      propertyPath: TriggerModule.colliderQueryMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029349959122465029, guid: b46de00bc3504884f9611b230277b67e, type: 3}
+      propertyPath: CollisionModule.maxCollisionShapes
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029349959122465029, guid: b46de00bc3504884f9611b230277b67e, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 960
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029349959122465029, guid: b46de00bc3504884f9611b230277b67e, type: 3}
+      propertyPath: TriggerModule.primitives.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029349959122465029, guid: b46de00bc3504884f9611b230277b67e, type: 3}
+      propertyPath: TriggerModule.primitives.Array.data[0]
+      value: 
+      objectReference: {fileID: 2277933506781286512, guid: d2912e740bff34743bceb7a2ce0fd39a, type: 3}
+    - target: {fileID: 9029349959122465029, guid: b46de00bc3504884f9611b230277b67e, type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByParticleSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029349959122465029, guid: b46de00bc3504884f9611b230277b67e, type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByParticleSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9029349959122466552, guid: b46de00bc3504884f9611b230277b67e, type: 3}
       propertyPath: m_Name
       value: Smoke 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9029349959122466552, guid: b46de00bc3504884f9611b230277b67e, type: 3}
+      propertyPath: m_TagString
+      value: Smoke
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b46de00bc3504884f9611b230277b67e, type: 3}
