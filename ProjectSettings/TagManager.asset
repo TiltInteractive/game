@@ -9,6 +9,7 @@ TagManager:
   - obsticle
   - UI_med
   - UI
+  - Smoke
   layers:
   - Default
   - TransparentFX

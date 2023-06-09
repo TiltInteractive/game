@@ -291,7 +291,7 @@ public class RoomGeneration : MonoBehaviour
                     pos.y = j;
                     roomPlacement(" ", pos);
 
-                    if (Random.Range(0.0f, 1.0f) < 0.05f * Mathf.Pow(part * level * rand, 1.0f / 3.0f))
+                    if (Random.Range(0.0f, 1.0f) < (0.05f * Mathf.Pow(part * level * rand, 1.0f / 3.0f)))
                     {
                         Create_enemy(enemy, pos);
                     }

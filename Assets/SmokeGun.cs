@@ -11,13 +11,14 @@ public class SmokeGun : MonoBehaviour
         spray = GetComponent<ParticleSystem>();
         spray.Stop();
         spray.enableEmission = false;
+        
 
     }
 
     void Reload()
-    {
+    {       
         var main = spray.main;
-        main.duration = 1.5f;
+        main.duration = 2f;
         Debug.Log("reload");
     }
 
@@ -32,8 +33,11 @@ public class SmokeGun : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
-            spray.Stop();
+
             spray.enableEmission = false;
+            spray.Stop();
+                       
+            
         }
         if (Input.GetKeyDown(KeyCode.R))
         {

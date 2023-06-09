@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3019316476575640570}
   - component: {fileID: 4257621908206528463}
   - component: {fileID: -7990268402000830291}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: edge
   m_TagString: roomComponent
   m_Icon: {fileID: 0}
