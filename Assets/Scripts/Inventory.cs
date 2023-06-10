@@ -24,8 +24,12 @@ public class Inventory : MonoBehaviour
     }
     public void removeItem(int index, int count)
     {
-        itemsCount[index] -= count;
-        Debug.Log("removed");
+        if (itemsCount[index] - count >= 0)
+        {
+            itemsCount[index] -= count;
+            Debug.Log("removed");
+        }
+        
     }
     public int QuantityItem(int index)
     {
