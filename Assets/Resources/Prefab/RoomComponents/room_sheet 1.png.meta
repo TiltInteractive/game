@@ -379,18 +379,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      room_sheet 1_0: 1324708681
+      room_sheet 1_1: 538740845
+      room_sheet 1_10: 483181219
       room_sheet 1_11: -168111458
+      room_sheet 1_2: 1348152214
       room_sheet 1_3: 755565391
       room_sheet 1_4: 2035671751
-      room_sheet 1_1: 538740845
       room_sheet 1_5: -1352656734
-      room_sheet 1_0: 1324708681
-      room_sheet 1_2: 1348152214
-      room_sheet 1_10: 483181219
       room_sheet 1_6: 500938677
       room_sheet 1_7: 1332795469
-      room_sheet 1_9: -1113269419
       room_sheet 1_8: 1890532199
+      room_sheet 1_9: -1113269419
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

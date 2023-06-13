@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4831152968676456409}
   - component: {fileID: 9222121829414430750}
   - component: {fileID: 1925155797752505841}
+  - component: {fileID: 1363796105438358417}
   m_Layer: 8
   m_Name: BzDoomer
   m_TagString: Enemy
@@ -106,7 +107,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01, y: 0}
+  m_Offset: {x: 0.007984206, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -117,7 +118,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.18, y: 0.26}
+  m_Size: {x: 0.14403161, y: 0.26}
   m_EdgeRadius: 0
 --- !u!114 &2277933506781286515
 MonoBehaviour:
@@ -133,6 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 100
+  money: {fileID: 0}
 --- !u!114 &2277933506781286524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,8 +185,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01, y: 0}
-  m_Size: {x: 0.15, y: 0.26}
+  m_Offset: {x: 0.012916356, y: -0.0063188076}
+  m_Size: {x: 0.17138666, y: 0.28430295}
   m_Direction: 0
 --- !u!95 &2277933506781286516
 Animator:
@@ -206,6 +208,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &4831152968676456409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,3 +267,15 @@ NavMeshAgent:
   m_BaseOffset: 0.1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1363796105438358417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2277933506781286525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c44e2532289ec64f8f26300dd6efdfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
