@@ -33,7 +33,7 @@ public class CollisionDamage : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
-    private void OnTriggerStay2D(Collider2D coll)
+    private void OnTriggerEnter2D(Collider2D coll)
     {
 
         StartCoroutine(damage(coll));
