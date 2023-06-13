@@ -172,8 +172,8 @@ public class RoomGeneration : MonoBehaviour
     public void Create_enemy(GameObject newBlock, Vector2 pos)
     {
         Vector2 size = new Vector2(1, 1);
-        pos.x = pos.x * sizeF;
-        pos.y = pos.y * -sizeF;
+        pos.x = pos.x * sizeF + 0.16f;
+        pos.y = pos.y * -sizeF + 0.16f;
         Vector2 position = pos;
 
         newBlock.tag = "Enemy";
