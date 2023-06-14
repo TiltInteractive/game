@@ -75,6 +75,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmokeGun
       objectReference: {fileID: 0}
+    - target: {fileID: 8293948484187927463, guid: eab86dbd677e3e24c9867f9b267d9cd1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8293948485613732522, guid: eab86dbd677e3e24c9867f9b267d9cd1, type: 3}
       propertyPath: m_Icon
       value: 
@@ -195,7 +199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9029349959122465029, guid: b46de00bc3504884f9611b230277b67e, type: 3}
       propertyPath: CollisionModule.collidesWith.m_Bits
-      value: 960
+      value: 832
       objectReference: {fileID: 0}
     - target: {fileID: 9029349959122465029, guid: b46de00bc3504884f9611b230277b67e, type: 3}
       propertyPath: TriggerModule.primitives.Array.size
